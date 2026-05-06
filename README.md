@@ -91,18 +91,16 @@ asyncio.run(main())
 git clone https://github.com/your-org/CloakBrowser.git
 cd CloakBrowser
 pip install -e ".[dev]"
+```
+
+Install browser binaries for development:
+
+```bash
 playwright install
 ```
 
 ### Running Tests
 
 ```bash
-pytest tests/ -v
-```
-
-### Linting
-
-```bash
-ruff check .
-black --che
+pytest tests/
 ```
