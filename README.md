@@ -77,9 +77,11 @@ asyncio.run(main())
 | `proxies` | `list[str]` | `None` | List of proxy URLs for rotation |
 | `browser_type` | `str` | `"chromium"` | Browser engine to use |
 | `headless` | `bool` | `True` | Run browser in headless mode |
-| `timeout` | `int` | `30000` | Default navigation timeout (ms) |
+| `timeout` | `int` | `60000` | Default navigation timeout (ms) |
 | `locale` | `str` | `"en-US"` | Browser locale |
 | `timezone` | `str` | `"America/New_York"` | Browser timezone |
+
+> **Personal note:** I bumped `timeout` from `30000` to `60000` ms — the 30s default was too aggressive for slower sites I work with.
 
 ## Development
 
@@ -102,19 +104,5 @@ pytest tests/ -v
 
 ```bash
 ruff check .
-black --check .
+black --che
 ```
-
-## Contributing
-
-Contributions are welcome! Please open an issue or pull request. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-## License
-
-MIT — see [LICENSE](LICENSE) for details.
-
-## Acknowledgements
-
-- [CloakHQ](https://github.com/CloakHQ) for the original CloakBrowser project
-- [Playwright](https://playwright.dev/) for the underlying browser automation
-- [playwright-stealth](https://github.com/AtuboDad/playwright_stealth) for stealth inspiration
