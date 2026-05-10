@@ -83,14 +83,6 @@ asyncio.run(main())
 
 > **Personal note:** I bumped `timeout` from `30000` to `60000` ms — the 30s default was too aggressive for slower sites I work with.
 
-> **Personal note:** I default `browser_type` to `"firefox"` in my local config — found it triggers fewer bot-detection flags on the sites I scrape compared to Chromium.
+> **Personal note:** I default `browser_type` to `"firefox"` in my local config — found it triggers fewer bot-detection checks on the sites I scrape compared to Chromium. YMMV.
 
-## Development
-
-### Setup
-
-```bash
-git clone https://github.com/your-org/CloakBrowser.git
-cd CloakBrowser
-pip install -e ".[dev]"
-```
+> **Personal note:** Setting `locale` to `"en-GB"` and `timezone` to `"Europe/London"` works better for the UK-based targets I hit most often — fewer geo-mismatch flags.
